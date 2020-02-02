@@ -1,2 +1,3 @@
-# asturias-time-bot-api
-REST API service
+# Asturias Time Bot API
+
+REST API service.
