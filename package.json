@@ -1,0 +1,38 @@
+{
+  "name": "asturias-weather-bot-api",
+  "version": "1.0.0",
+  "description": "API REST Service to get, post and delete municipalities and forecastings",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioRubio/asturias-weather-bot-api.git"
+  },
+  "keywords": [
+    "APIREST",
+    "API",
+    "REST",
+    "bot",
+    "forecasting",
+    "Asturias"
+  ],
+  "author": "Ignacio Rubio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IgnacioRubio/asturias-weather-bot-api/issues"
+  },
+  "homepage": "https://github.com/IgnacioRubio/asturias-weather-bot-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

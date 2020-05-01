@@ -1,3 +1,3 @@
-# Asturias Time Bot API
+# Asturias Weather Bot API
 
 REST API service.
