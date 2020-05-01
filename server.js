@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const municipalitiesRoutes = require('./src/municipalities/municipalities.route');
 
@@ -9,6 +10,14 @@ const app = express();
 
 // environment variables
 const PORT_NUMBER = process.env.PORT_NUMBER;
+const MONGODB_HOST = process.env.MONGODB_HOST;
+const MONGODB_DATABASE = process.env.MONGODB_DATABASE;
+
+// mongodb connection
+const mongoURI = `mongodb://${MONGODB_HOST}/${MONGODB_DATABASE}`;
+mongoose.connect(mongoURI, {
+  useMongoClient: true
+});
 
 // log http request
 app.use(logger('dev'));
