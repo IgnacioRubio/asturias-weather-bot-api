@@ -53,5 +53,7 @@ app.listen(PORT_NUMBER, (err) => {
     console.error(JSON.stringify(err));
     return;
   }
+  
+  console.log(new Date().toString());
   console.log(`Server running on port: ${PORT_NUMBER}`);
 });

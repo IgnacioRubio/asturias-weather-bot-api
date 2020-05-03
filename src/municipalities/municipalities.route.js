@@ -4,20 +4,20 @@ const ctr = require('./municipalities.controller');
 // GETS ALL RECORDS
 router.get('/', ctr.getAll);
 
-// GET ONE RECORD BY ID
-router.get('/:id', ctr.getById);
+// GET ONE RECORD BY CODE
+router.get('/:code', ctr.getByCode);
 
 // CREATE A NEW RECORD
 router.post('/', ctr.create);
 
 // UPDATE A RECORD
-router.patch('/:id', ctr.update);
+router.patch('/:code', ctr.update);
 
 // DELETE ALL RECORDS
 router.delete('/', ctr.deleteAll);
 
 // DELETE ONE RECORD
-router.delete('/:id', ctr.deleteById);
+router.delete('/:code', ctr.deleteByCode);
 
 
 // EXPORTS MODULE
