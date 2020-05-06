@@ -1,8 +1,12 @@
 const router = require('express').Router();
 const ctr = require('./municipalities.controller');
 
+
 // GETS ALL RECORDS
 router.get('/', ctr.getAll);
+
+// COUNT ALL RECORDS
+router.get('/count', ctr.count);
 
 // GET ONE RECORD BY CODE
 router.get('/:code', ctr.getByCode);

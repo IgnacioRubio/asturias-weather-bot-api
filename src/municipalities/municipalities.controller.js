@@ -1,5 +1,6 @@
 const Municipality = require('./municipalities.model');
 
+
 // GETS ALL RECORDS
 exports.getAll = (req, res, next) => {
   const fields = 'code name capital created';
@@ -10,6 +11,20 @@ exports.getAll = (req, res, next) => {
     }
 
     res.status(200).json(docs);
+  });
+}
+
+// COUNT ALL RECORDS
+exports.count = (req, res, next) => {
+  const fields = 'code';
+
+  Municipality.find({}, fields, (err, docs) => {
+    if (err) {
+      return next(err);
+    }
+    
+    const count = { "count": docs.length };
+    res.status(200).json(count);
   });
 }
 
@@ -61,10 +76,24 @@ exports.update = (req, res, next) => {
 
 // DELETE ALL RECORDS
 exports.deleteAll = (req, res, next) => {
-  res.status(204).send('DELETE ALL MUNICIPIOS');
+  Municipality.deleteMany({}, (err) => {
+    if (err) {
+      return next(err);
+    }
+
+    res.sendStatus(204);    
+  });
 }
 
 // DELETE ONE RECORD
 exports.deleteByCode = (req, res, next) => {
-  res.status(204).send('DELETE MUNICIPIO BY CODE');
+  const code = req.params.code;
+
+  Municipality.deleteOne({ code: code }, (err) => {
+    if (err) {
+      return next(err);
+    }
+
+    res.sendStatus(204); 
+  });
 }

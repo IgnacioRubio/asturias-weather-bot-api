@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const municipalitiesRoutes = require('./src/municipalities/municipalities.route');
+const forecastingsRoutes = require('./src/forecastings/forecastings.route');
 
 const app = express();
 
@@ -27,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // all routes to handle http request
 app.use('/municipalities', municipalitiesRoutes);
-
+app.use('/forecastings', forecastingsRoutes);
 
 // error for not request handle
 app.use((req, res, next) => {
