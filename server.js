@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const municipalitiesRoutes = require('./src/municipalities/municipalities.route');
 const forecastingsRoutes = require('./src/forecastings/forecastings.route');
 
+const email = require('./src/services/email');
+
 const app = express();
 
 // environment variables
@@ -40,6 +42,14 @@ app.use((req, res, next) => {
 
 // error handler for any error
 app.use((err, req, res, next) => {
+  // notify error with email
+  msg = {
+    subject: 'ERROR WAS THROW IN ASTURIAS-WEATHER-BOT-API',
+    text: err.toString()
+  };
+
+  Email.send(msg);
+
   res.status(err.status || 500);
   res.json({
     error: {
