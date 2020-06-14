@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pm2": "pm2 start server.js --name awb-api",
     "dev": "nodemon server.js"
   },
   "repository": {
