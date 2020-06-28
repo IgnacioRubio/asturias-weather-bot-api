@@ -14,6 +14,21 @@ exports.getAll = (req, res, next) => {
   });
 }
 
+// GET ONE RECORD BY ID
+exports.getByCode = (req, res, next) => {
+  const code = req.params.code;
+
+  const fields = 'municipalityName municipalityCode precipitations temperatures stateSkies winds humidities created';
+
+  Forecasting.findOne({ municipalityCode: code }, fields, (err, doc) => {
+    if (err) {
+      return next(err);
+    }
+
+    res.status(200).json(doc);
+  });
+}
+
 // CREATE A NEW RECORD
 exports.create = (req, res, next) => {
   let forecastingData = {
