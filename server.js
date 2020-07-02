@@ -1,4 +1,6 @@
 require('dotenv').config();
+require('./src/util/env');
+
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
@@ -7,7 +9,7 @@ const mongoose = require('mongoose');
 const municipalitiesRoutes = require('./src/municipalities/municipalities.route');
 const forecastingsRoutes = require('./src/forecastings/forecastings.route');
 
-const email = require('./src/services/email');
+const Email = require('./src/services/email');
 
 const app = express();
 
