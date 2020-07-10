@@ -133,3 +133,7 @@ PM2 is used to make the deployment.
 * [mongoose](https://maven.apache.org/) - MongoDB ODM
 * [nodemailer](https://maven.apache.org/) - Easy as cake e-mail sending
 * [dotenv](https://www.npmjs.com/package/dotenv) - Storing configuration in the environment 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
