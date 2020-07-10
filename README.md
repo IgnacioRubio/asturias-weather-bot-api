@@ -54,11 +54,11 @@ MONGODB_DATABASE=AsturiasWeatherDB
 MONGODB_USER=
 MOGNODB_PASSWORD=
 EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=
-EMAIL_AUTH_USER=
-EMAIL_AUTH_PASS=
-EMAIL_MSG_FROM=
-EMAIL_MSG_TO=
+EMAIL_PORT=465
+EMAIL_AUTH_USER=example@example.com
+EMAIL_AUTH_PASS=example123
+EMAIL_MSG_FROM=exmaple@example.com
+EMAIL_MSG_TO=example@example.com
 ```
 
 3. Run API service 
