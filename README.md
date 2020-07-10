@@ -129,9 +129,9 @@ PM2 is used to make the deployment.
 ## Built with 🛠️
 
 * [NodeJS](https://nodejs.org/en/) - JavaScript runtime
-* [Express](https://maven.apache.org/) - Web application framework
-* [mongoose](https://maven.apache.org/) - MongoDB ODM
-* [nodemailer](https://maven.apache.org/) - Easy as cake e-mail sending
+* [Express](https://expressjs.com/) - Web application framework
+* [mongoose](https://mongoosejs.com/) - MongoDB ODM
+* [nodemailer](https://www.npmjs.com/package/nodemailer) - Easy as cake e-mail sending
 * [dotenv](https://www.npmjs.com/package/dotenv) - Storing configuration in the environment 
 
 ## License
