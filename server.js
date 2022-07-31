@@ -53,7 +53,7 @@ app.use((err, req, res, next) => {
     text: err.toString()
   };
 
-  // Email.send(msg);
+  Email.send(msg);
 
   res.status(err.status || 500);
   res.json({
