@@ -17,9 +17,12 @@ const app = express();
 const PORT_NUMBER = process.env.PORT_NUMBER;
 const MONGODB_HOST = process.env.MONGODB_HOST;
 const MONGODB_DATABASE = process.env.MONGODB_DATABASE;
+const MONGODB_USER = process.env.MONGODB_USER;
+const MOGNODB_PASSWORD = process.env.MOGNODB_PASSWORD;
 
 // mongodb connection
-const mongoURI = `mongodb://${MONGODB_HOST}/${MONGODB_DATABASE}`;
+const mongoURI = `mongodb://${MONGODB_USER}:${MOGNODB_PASSWORD}@${MONGODB_HOST}/${MONGODB_DATABASE}`;
+
 mongoose.connect(mongoURI, {
   useMongoClient: true
 });
@@ -50,7 +53,7 @@ app.use((err, req, res, next) => {
     text: err.toString()
   };
 
-  Email.send(msg);
+  // Email.send(msg);
 
   res.status(err.status || 500);
   res.json({

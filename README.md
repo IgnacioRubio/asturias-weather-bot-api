@@ -44,7 +44,7 @@ npm install
 3. Create and set up environment variables into *.env* file 
 
 ```bash
-echo > .env
+touch .env
 ```
 
 ```

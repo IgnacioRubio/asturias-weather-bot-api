@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  asturias-weather-bot-db:
+    image: "mongo:5"
+    ports:
+      - "27020:27017"
+    volumes:
+      - mongo_asturias_weather_bot:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_MONGO_ROOT_USER:?err}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_MONGO_ROOT_PASSWORD:?err}
+volumes:
+  mongo_asturias_weather_bot:
+    external: false
