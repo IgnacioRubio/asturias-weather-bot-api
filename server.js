@@ -23,9 +23,7 @@ const MOGNODB_PASSWORD = process.env.MOGNODB_PASSWORD;
 // mongodb connection
 const mongoURI = `mongodb://${MONGODB_USER}:${MOGNODB_PASSWORD}@${MONGODB_HOST}/${MONGODB_DATABASE}`;
 
-mongoose.connect(mongoURI, {
-  useMongoClient: true
-});
+mongoose.connect(mongoURI);
 
 // log http request
 app.use(logger('dev'));
